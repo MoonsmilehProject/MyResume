@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_profile"
+            android:icon="@drawable/startup"
+            android:title="@string/title_profile"/>
+
+    <item
+            android:id="@+id/navigation_job"
+            android:icon="@drawable/portfolio"
+            android:title="@string/title_employ"/>
+
+    <item
+            android:id="@+id/navigation_education"
+            android:icon="@drawable/college"
+
+            android:title="@string/title_education"/>
+
+</menu>
