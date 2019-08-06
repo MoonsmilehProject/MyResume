@@ -75,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorWhite"
                 android:justificationMode="inter_word"
+                android:contentDescription="@string/image_description"
                 android:layout_marginTop="8dp"
         />
 
@@ -86,6 +87,7 @@
 
             <ImageView android:layout_width="25dp"
                        android:layout_height="30dp"
+                       android:contentDescription="@string/image_description"
                        android:src="@drawable/medal"/>
 
             <TextView

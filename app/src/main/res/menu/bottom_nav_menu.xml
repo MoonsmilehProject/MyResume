@@ -11,10 +11,4 @@
             android:icon="@drawable/portfolio"
             android:title="@string/title_employ"/>
 
-    <item
-            android:id="@+id/navigation_education"
-            android:icon="@drawable/college"
-
-            android:title="@string/title_education"/>
-
 </menu>

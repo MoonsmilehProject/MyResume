@@ -2,6 +2,7 @@ package mx.com.moonsmileh.myresume.data.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import mx.com.moonsmileh.myresume.BuildConfig
 import mx.com.moonsmileh.myresume.data.response.JobResponse
 import mx.com.moonsmileh.myresume.data.response.ProfileResponse
 import okhttp3.OkHttpClient
@@ -19,7 +20,7 @@ private val loggingInterceptor =
 private val okHttpClient = OkHttpClient.Builder().addInterceptor(loggingInterceptor)
 
 private val retrofit = Retrofit.Builder()
-    .baseUrl("https://gist.githubusercontent.com/MoonsmilehProject/")
+    .baseUrl(BuildConfig.BASE_URL)
     .client(okHttpClient.build())
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .build()

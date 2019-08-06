@@ -21,6 +21,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions("1.0")
+    productFlavors {
+        dev {
+            dimension "1.0"
+            buildConfigField 'String', 'BASE_URL', '"https://gist.githubusercontent.com/MoonsmilehProject/"'
+
+        }
+    }
 }
 
 dependencies {

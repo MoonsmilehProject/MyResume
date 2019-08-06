@@ -1,6 +1,5 @@
 package mx.com.moonsmileh.myresume.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,7 +23,6 @@ class ResumeViewModel : ViewModel() {
     private fun fetchEmployees() {
         ResumeAPI.retrofitService.fetchJobs().enqueue(object : Callback<JobResponse> {
             override fun onFailure(call: Call<JobResponse>, t: Throwable) {
-                Log.e("onFailure Fetching", "By " + t.message)
             }
 
             override fun onResponse(call: Call<JobResponse>, response: Response<JobResponse>) {

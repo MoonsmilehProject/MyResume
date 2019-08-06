@@ -29,9 +29,7 @@ class MainActivity : AppCompatActivity() {
                 loadFragment(JobFragment())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_education -> {
-                return@OnNavigationItemSelectedListener true
-            }
+            //TODO: Add studies section
         }
         false
     }

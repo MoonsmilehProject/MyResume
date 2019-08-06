@@ -3,6 +3,7 @@ package mx.com.moonsmileh.myresume.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.cardview_skill_item.view.*
 import mx.com.moonsmileh.myresume.R
@@ -29,7 +30,7 @@ class SkillsAdapter : RecyclerView.Adapter<SkillsAdapter.ViewHolder>() {
     override fun getItemCount() = skills.size
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvSkill = view.textview_skill
+        val tvSkill: TextView = view.textview_skill
     }
 
 

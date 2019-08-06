@@ -3,7 +3,8 @@ package mx.com.moonsmileh.myresume.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.res.ResourcesCompat
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.cardview_job_item.view.*
@@ -18,7 +19,7 @@ class JobAdapter : RecyclerView.Adapter<JobAdapter.ViewHolder>() {
             notifyDataSetChanged()
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JobAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.cardview_job_item, parent, false)
         return ViewHolder(view)
@@ -40,12 +41,12 @@ class JobAdapter : RecyclerView.Adapter<JobAdapter.ViewHolder>() {
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ivCompanyLogo = view.iv_company
-        val tvCompanyName = view.tv_company_name
-        val tvPosition = view.tv_position
-        val tvPeriod = view.tv_period
-        val tvJobDescription = view.tv_job_description
-        val tvAchievements = view.tv_job_achievments
+        private val ivCompanyLogo: ImageView = view.iv_company
+        val tvCompanyName: TextView = view.tv_company_name
+        val tvPosition: TextView = view.tv_position
+        val tvPeriod: TextView = view.tv_period
+        val tvJobDescription: TextView = view.tv_job_description
+        val tvAchievements: TextView = view.tv_job_achievments
 
         fun loadViewWithUrl(url: String) {
             Picasso.get().load(url).into(ivCompanyLogo)
